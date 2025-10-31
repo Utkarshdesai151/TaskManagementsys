@@ -1,0 +1,11 @@
+.sidebar{
+    padding: 20px 18px 418px 18px;
+}
+.sidebar-nav {
+    padding-top: 139px;
+
+}
+ul li{
+    padding-bottom: 49px;
+    overflow-y: hidden;
+}
