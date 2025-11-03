@@ -1,29 +1,27 @@
 "use client";
 import "../src/App.css";
 import Sidebar from "./component/sidebar";
-
+import Userpannel from "./component/userpannel";
+import Dashbord from "./component/Dashbord/dashbord";
 function App() {
   return (
-    <div className="app-container d-flex">
-      {/* ---- Sidebar (Fixed Left) ---- */}
-      <Sidebar />
+    <div>
+       <div className="app-container d-flex">
+      <div className="sidebar-container">
+        <Sidebar />
+      </div>
 
-      {/* ---- Main Content Area ---- */}
-      <div className="main-content flex-grow-1 d-flex">
-        <div className="container-fluid">
-          <div className="row g-3 p-3">
-            <div className="col-md-7 border ">
-              <div className="text-white">
-                hello
-              </div>
-            </div>
-            <div className="col-md-4 border ">
-         
-            </div>
-          </div>
+      <div className="main-container flex-grow-1">
+        {/* <div className="userpannel-section mb-3">
+          <Userpannel />
+        </div> */} 
+        <div className="dashboard-section h-100">
+          <Dashbord />
         </div>
       </div>
     </div>
+    </div>
+
   );
 }
 

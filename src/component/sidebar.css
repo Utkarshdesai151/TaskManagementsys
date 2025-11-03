@@ -1,6 +1,13 @@
 .sidebar{
     padding: 20px 18px 418px 18px;
 }
+.sidebar::-webkit-scrollbar,
+.sidebar .sidebar-nav::-webkit-scrollbar,
+.sidebar *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
 .sidebar-nav {
     padding-top: 139px;
 
