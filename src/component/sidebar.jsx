@@ -12,7 +12,7 @@ import './sidebar.css'
 export default function Sidebar() {
   return (
     <div
-      className="sidebar sidebar-narrow  sidebar-dark border-end d-flex flex-column align-items-center justify-content-between py-4"
+      className="sidebar sidebar-narrow  sidebar-dark border-end d-flex flex-column align-items-center justify-content-between py-4 px-4"
       style={{ height: "100vh", }}>
       <div className="text-center">
         <img src={logo2} alt="Secondary Logo" width="45" height="45" />

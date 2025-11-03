@@ -4,13 +4,15 @@ import Star from '../../assets/Cards/Star.svg'
 import Newtask from '../../assets/Cards/NewTask.svg'
 import Projectdone from '../../assets/Cards/Projectdone.svg'
 import GlowLineChart from "../Charts/Glowlinecharts"
-import Graphline from "../../assets/Cards/Graph1.svg";
+import Graphline1 from "../../assets/Cards/Graph1.svg";
+import Graphline2 from "../../assets/Cards/Graph2.svg";
+import Graphline3 from "../../assets/Cards/Graph3.svg";
 
 export default function Dashbord() {
     const TaskTrackData = [
-        { id: 1,img:Star,title: "Task Complated",projectdetails:<>10+ more <br /> from last week</> },
-        { id: 2,img:Newtask,title: "New Task",projectdetails:<>5+ more <br /> from last week</> },
-        { id: 3,img:Projectdone,title: "Project Done",projectdetails:<>2+ more <br /> from last week</> },
+        { id: 1,img:Star,graphimg:Graphline1,title: "Task Complated",projectdetails:<>10+ more <br /> from last week</> },
+        { id: 2,img:Newtask,graphimg:Graphline2,title: "New Task",projectdetails:<>5+ more <br /> from last week</> },
+        { id: 3,img:Projectdone,graphimg:Graphline3,title: "Project Done",projectdetails:<>2+ more <br /> from last week</> },
     ]
 
     return (
@@ -30,7 +32,7 @@ export default function Dashbord() {
                                             <p>{task.title}</p>                
                                         </div>
                                         <div className="bb d-flex">
-                                               <img src={Graphline} alt="" />
+                                               <img src={task.graphimg} alt="" />
                                                 <p className="">{task.projectdetails}</p>
                                             </div>
                                     </div>
