@@ -29,3 +29,13 @@ p{
     padding: 0px;
     margin: 0px;    
 }
+.bb{
+    padding-top: 30px;
+    padding-bottom: 43px;
+    justify-content: center;
+    align-items: center;
+}
+.bb p{
+    text-align: right;
+    font-size: 12px;
+}
