@@ -1,12 +1,58 @@
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* === Overall Wrapper === */
+.app-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #141519;
+  color: #E1E3E7;
 }
 
-body{
-  width: 100%;
+/* === Sidebar Area === */
+.sidebar-container {
+  width: 90px; /* fixed width for icons */
+  background-color: #1E1F25;
+  border-right: 1px solid #24252D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100vh;
-  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+}
+
+/* === Main Content Area === */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px 30px;
+  background-color: #141519;
+}
+
+/* === Scrollbar Hidden === */
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+.main-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .sidebar-container {
+    width: 70px;
+  }
+  .main-content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-container {
+    display: none; /* hide sidebar on small screens */
+  }
+  .main-content {
+    padding: 10px;
+  }
 }
