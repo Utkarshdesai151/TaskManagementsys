@@ -1,5 +1,4 @@
 .task-list-container {
-  background: #1e1f25;
   border-radius: 10px;
   align-items: center;
   justify-content: left;
@@ -9,5 +8,9 @@
   background-color: #2b2d35;
   border-radius: 10px;
   transition: all 0.3s ease;
+  width: 98%;
+  align-items: start;
+  padding-right: 1.5rem;
 }
+
 

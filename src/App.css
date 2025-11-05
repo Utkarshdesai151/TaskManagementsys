@@ -1,58 +1,74 @@
-/* === Overall Wrapper === */
+/* ========== APP WRAPPER ========== */
 .app-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
-  background-color: #141519;
-  color: #E1E3E7;
+  
+  overflow-x: hidden;
 }
 
-/* === Sidebar Area === */
+/* Sidebar container styling */
 .sidebar-container {
-  width: 90px; /* fixed width for icons */
-  background-color: #1E1F25;
-  border-right: 1px solid #24252D;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh;
-  position: sticky;
-  top: 0;
+  flex-shrink: 0;
+  z-index: 1000;
 }
 
-/* === Main Content Area === */
+/* Main content area */
 .main-content {
-  flex-grow: 1;
+  flex: 1;
+  
+  transition: all 0.3s ease;
   overflow-y: auto;
-  padding: 20px 30px;
-  background-color: #141519;
 }
 
-/* === Scrollbar Hidden === */
-.main-content::-webkit-scrollbar {
-  display: none;
-}
+/* Add padding and spacing */
 .main-content {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  padding-top: 70px;
 }
 
-/* === Responsive === */
+/* ========== RESPONSIVE BEHAVIOR ========== */
+
+/* On smaller devices */
 @media (max-width: 992px) {
-  .sidebar-container {
-    width: 70px;
+  .app-wrapper {
+    flex-direction: column;
   }
+
+  .sidebar-container {
+    width: 100%;
+    position: relative;
+  }
+
   .main-content {
-    padding: 15px;
+    padding: 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  .sidebar-container {
-    display: none; /* hide sidebar on small screens */
+/* On laptops and large desktops */
+@media (min-width: 992px) {
+  .app-wrapper {
+    display: flex;
+    flex-direction: row;
   }
+
+  .sidebar-container {
+    width: 94px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
   .main-content {
-    padding: 10px;
+    margin-left: 94px; /* adjust space for sidebar */
+    padding: 2rem;
+  }
+}
+
+/* On ultra-wide screens (large desktops) */
+@media (min-width: 1400px) {
+  .main-content {
+    padding: 3rem 4rem;
+    max-width: 1800px;
+    margin: 0 auto;
   }
 }

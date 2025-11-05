@@ -22,7 +22,7 @@ export default function Tasklist() {
       Taskhead: "Search Inspiration for Project",
       link: "www.uistore.com",
       comments: 8,
-      progress: 24,
+      progress: 20,
     },
   ];
 
@@ -31,14 +31,14 @@ export default function Tasklist() {
       {Taskcontent.map((task) => (
         <div
           key={task.id}
-          className="task-contents row align-items-center text-white mb-8 "
+          className="task-contents row align-items-center justify-content-center text-white  my-3 "
         >
           <div className="col-md-3 d-flex align-items-center gap-1">
             <div
               className="play-icon d-flex justify-content-center align-items-center"
              
             >
-              <img src={Playbutton} className="imf-fluid"/>
+              <img src={Playbutton} className="imf-fluid pt-3 align-items-centers justify-content-center"/>
             </div>
 
             <div>
@@ -49,7 +49,6 @@ export default function Tasklist() {
               </p>
             </div>
           </div>
-
           <div className="col-md-5">
             <h6 className="fw-semibold mb-1">{task.Taskhead}</h6>
             <div className="d-flex align-items-center gap-3 flex-wrap text-muted small">
@@ -87,11 +86,12 @@ export default function Tasklist() {
 
           <div className="col-md-2 text-end">
             <button
-              className="btn d-flex align-items-center justify-content-center gap-2 px-3 py-2 fw-semibold w-100"
+              className="btn d-flex align-items-center justify-content-center gap-2 px- py-2 fw-semibold "
               style={{
                 backgroundColor: "#5a5f7c",
                 color: "white",
                 borderRadius: "10px",
+                width: "7.6rem",
               }}
             >
               <img src={Stopwatch} alt="Reminder" width="18" />

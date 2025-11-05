@@ -82,9 +82,9 @@ export default function TaskChart() {
               border: "none",
               color: "#fff",
             }} */}
-          />
+          {/* /> */}
 
-          <defs>
+            <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#00BFFF" stopOpacity={0.5} />
               <stop offset="100%" stopColor="#00BFFF" stopOpacity={0} />
