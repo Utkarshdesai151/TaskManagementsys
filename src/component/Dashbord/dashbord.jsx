@@ -9,6 +9,7 @@ import Graphline2 from "../../assets/Cards/Graph2.svg";
 import Graphline3 from "../../assets/Cards/Graph3.svg";
 import TaskChart from "../Taskchart.js/taskchart"
 import Tasklist from "../Tasklist/Tasklist"
+import Todayschedule from "../schedule/schedule"
 export default function Dashbord() {
     const TaskTrackData = [
         { id: 1, img: Star, graphimg: Graphline1, title: "Task Complated", projectdetails: <>10+ more <br /> from last week</> },
@@ -50,7 +51,7 @@ export default function Dashbord() {
                         </section>
                     </div>
                     <div className="col-3 border">
-                        hello
+                        <Todayschedule/>
                     </div>
                 </div>
             </div>
