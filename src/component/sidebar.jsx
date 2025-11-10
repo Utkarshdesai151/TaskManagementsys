@@ -6,6 +6,7 @@ import Task from "../assets/sidebar/Task.svg";
 import Setting from "../assets/sidebar/Settings.svg";
 import Folders from "../assets/sidebar/Folders.svg";
 import Messages from "../assets/sidebar/Message.svg";
+import { Link } from "react-router-dom";
 import "./sidebar.css";
 
 export default function Sidebar() {
@@ -35,13 +36,14 @@ export default function Sidebar() {
         </div>
 
         <ul className="sidebar-nav">
-          <li><img src={Dashbord} alt="Dashboard" /></li>
-          <li><img src={Timeline} alt="Timeline" /></li>
-          <li><img src={Task} alt="Task" /></li>
+          <li><Link to="/"><img src={Dashbord} alt="Dashboard" /></Link></li>
+          <li><Link to="/timeline"><img src={Timeline} alt="Schedule" /></Link></li>
+          <li><Link to="/task"><img src={Task} alt="Task" /></Link></li>
+          <li><Link to="/messagecomp"><img src={Messages} alt="Messagescomp" /></Link></li>
+          <li><Link to="/callbar"><img src={Folders} alt="CallBar" /></Link></li>
           <li><img src={Setting} alt="Settings" /></li>
-          <li><img src={Messages} alt="Messages" /></li>
-          <li><img src={Folders} alt="Folders" /></li>
         </ul>
+
       </div>
 
       {/* Overlay for small screens */}

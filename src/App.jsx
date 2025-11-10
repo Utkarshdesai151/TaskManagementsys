@@ -2,6 +2,10 @@
 import "../src/App.css";
 import Sidebar from "./component/sidebar";
 import Dashbord from "./component/Dashbord/dashbord";
+import Timeline from "./component/Timeline/timeline";
+import Task from "./component/Task/task";
+import { Routes,Route } from "react-router-dom";
+import Messagecomp from "./component/Messagecomp/Messagecomp";
 
 function App() {
   return (
@@ -11,9 +15,15 @@ function App() {
         <Sidebar />
       </aside>
 
+
       {/* Main Content */}
       <main className="main-content flex-grow-1 p-3 p-lg-4">
-        <Dashbord />
+        <Routes>
+           <Route path="/" element={<Dashbord/>}/>
+           <Route path="/timeline" element={<Timeline/>}/>
+           <Route path="/task" element={<Task/>}/> 
+           <Route path="/messagecomp" element={<Messagecomp/>}/>  
+        </Routes>
       </main>
     </div>
   );
