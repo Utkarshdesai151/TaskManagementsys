@@ -1,16 +1,49 @@
-# React + Vite
+# ✅ Task Management System (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **modern Task Management System** built with **React (Vite)** to help you efficiently manage your **daily routine**, **track progress**, and stay on top of your **pending tasks**.  
+Designed with an **attractive dark UI** and built using **Bootstrap**, **Core UI**, and **custom CSS** for a fully **responsive** and **intuitive user experience**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Key Features
 
-## React Compiler
+✨ **Task Organization** — Add, edit, delete, and categorize your daily tasks effortlessly.  
+📊 **Progress Tracking** — Monitor your task completion percentage with visual progress indicators.  
+🕓 **Daily Routine Planner** — Stay productive by planning tasks for specific times of the day.  
+🔔 **Reminders & Alerts** — Get visual cues for pending or overdue tasks.  
+🌙 **Attractive Dark Mode** — Sleek, modern, and eye-friendly dark UI for long usage hours.  
+📱 **Fully Responsive Design** — Seamlessly adapts to all screen sizes using **Bootstrap** and **Core UI**.  
+💾 **Persistent Data** — Save tasks locally or via backend integration for long-term tracking.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🖥️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | [React](https://react.dev/) (with [Vite](https://vitejs.dev/)) |
+| **UI Frameworks** | [Bootstrap 5](https://getbootstrap.com/), [Core UI](https://coreui.io/react/), Custom CSS |
+| **State Management** | React Hooks / Context API |
+| **Deployment** | Vercel / Netlify / GitHub Pages |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+cd folder directory
+npm install
+
+npm run dev
+
+##Future Enhancements
+
+🧩 User Authentication
+
+☁️ Cloud Storage Integration
+
+📆 Calendar View
+
+🗣️ AI-based Task Suggestions
+
+📱 Mobile App Version
