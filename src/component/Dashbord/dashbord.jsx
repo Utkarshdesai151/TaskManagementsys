@@ -22,10 +22,10 @@ export default function Dashbord() {
             <div className="userpannel-section mb-3 flex-grow-1">
                 <Userpannel />
             </div>
-            <div className="container justify-content-center align-items-center">
+            <div className="container justify-content-centerpx-2 align-items-center">
                 <div className="row row-cols-2">
                     <div className="col-9">
-                        <section className="task-section px-4">
+                        <section className="task-section px-4 py-4">
                             <div className="row row-cols-3 gap-3 flex">
                                 {TaskTrackData.map((task) => (
                                     <div className="col task-card">

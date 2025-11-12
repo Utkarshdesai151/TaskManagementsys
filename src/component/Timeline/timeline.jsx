@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./timeline.css";
-import TaskBoard from "./Taskbar2"; // your TaskBoard file
+import TaskBoard from "./Taskbar2";
+import Userpannel from "../userpannel";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const tasks = [
   { id: 1, name: "Profile", color: "#5C6BF7", start: 5, end: 8, progress: 48 },
@@ -14,50 +17,63 @@ const tasks = [
 
 export default function Timeline2() {
   const [hovered, setHovered] = useState(null);
+  const [startDate, setStartDate] = useState(new Date());
 
   return (
-    <div className="timeline-main">
-      {/* Week Header */}
-      <div className="timeline-header">
-        <div className="task-header-title">Tasks</div>
-        <div className="timeline-weeks">
-          {Array.from({ length: 20 }, (_, i) => (
-            <div key={i} className="timeline-week">
-              S{i + 1}
+    <div className="container">
+      <Userpannel />
+      <div className="time-header mb-4">
+        <div className="row align-items-center mb-2">
+          <div className="col-3">
+            <p className="text-white f-24 fw-bold mb-0">Timeline</p>
+          </div>
+          <div className="col-3">
+            <div className="d-flex gap-2">
+              <button className="button-primary">
+                Today
+              </button>
+              <DatePicker className="col-9 datepicker" selected={startDate} onChange={(date) => setStartDate(date)} /> 
             </div>
-          ))}
+          </div>
         </div>
       </div>
+      <div className="timeline-weeks">
+        {Array.from({ length: 21 }, (_, i) => (
+          <div key={i} className="timeline-week">
+            S{i + 1}
+          </div>
+        ))}
+      </div>
+      <div className="timeline-main">
+        <div className="timeline-body">
+          <div className="task-column">
+            <TaskBoard />
+          </div>
 
-      {/* Body Section */}
-      <div className="timeline-body">
-        <div className="task-column">
-          <TaskBoard />
-        </div>
+          <div className="timeline-column">
+            {tasks.map((task) => (
+              <div
+                key={task.id}
+                className="task-bar"
+                style={{
+                  gridColumn: `${task.start} / ${task.end}`,
+                  backgroundColor: task.color,
+                }}
+                onMouseEnter={() => setHovered(task.id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <span className="task-name">{task.name}</span>
+                <span className="task-progress">{task.progress}%</span>
 
-        <div className="timeline-column">
-          {tasks.map((task) => (
-            <div
-              key={task.id}
-              className="task-bar"
-              style={{
-                gridColumn: `${task.start} / ${task.end}`,
-                backgroundColor: task.color,
-              }}
-              onMouseEnter={() => setHovered(task.id)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <span className="task-name">{task.name}</span>
-              <span className="task-progress">{task.progress}%</span>
-
-              {hovered === task.id && (
-                <div className="tooltip">
-                  <h4>{task.name}</h4>
-                  <p>Progress: {task.progress}%</p>
-                </div>
-              )}
-            </div>
-          ))}
+                {hovered === task.id && (
+                  <div className="tooltip">
+                    <h4>{task.name}</h4>
+                    <p>Progress: {task.progress}%</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
