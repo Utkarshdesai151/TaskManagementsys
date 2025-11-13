@@ -1,5 +1,3 @@
-.task-card{
-}
 .timeline-main {
   flex-direction: column;
   height: 100vh;
@@ -49,21 +47,23 @@
 }
 
 .timeline-column {
-  display: grid;
-  grid-template-columns: repeat(20, 100px);
-  flex: 1;
-  position: relative;
-  background: transparent;
-  overflow-x: auto;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(20, 100px);
+    flex: 1;
+    position: relative;
+    background: transparent;
+    overflow-x: auto;
+    padding: 20px;
+    margin-top: 8.4rem;
 }
 
-.task-bar {
+.task-bar1 {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 50px;
+  background-color: #5051F9;
   border-radius: 10px;
   color: #fff;
   padding: 0 12px;
@@ -118,4 +118,57 @@
 }
 .f-24{
   font-size: 2.2rem;
+}
+.toggle-container {
+  display: flex;
+  align-items: center;
+  background-color: #36375E;
+  border-radius: 30px;
+  padding: 2px;
+  width: auto; 
+  font-family: sans-serif;
+  color: white;
+  height: 50px;
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    background-color: #5b42f3;
+    border-radius: 25px;
+    padding: 6px 18px;
+    position: relative;
+    margin-right: 10px;
+    height: 3.2rem;
+    left: -2px;
+}
+
+.toggle-button {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.toggle-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.percentage-display {
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  padding: 6px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.arrow-icon {
+  font-size: 18px;
+  margin-left: 10px;
+  padding-right: 10px;
+  color: #5b42f3;
 }
